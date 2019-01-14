@@ -1,4 +1,4 @@
-const PHP_PATH = "http://ilatih.com/ujicoba/scripts/";
+const PHP_PATH = "http://ilatih.com/quiz/scripts/";
 const CORRECT_ANSWER_SCORE = 1;
 const WRONG_ANSWER_SCORE = 0;
 
@@ -25,7 +25,7 @@ var questions;
 $(document).ready(function () {
     /*var isFirefox = typeof InstallTrigger !== 'undefined';
     if (!isFirefox) {
-        window.location.href = "http://ilatih.com/ujicoba/browsernotsupported.html";
+        window.location.href = "http://ilatih.com/quiz/browsernotsupported.html";
         return;
     }*/
     $.ajax({
@@ -37,7 +37,7 @@ $(document).ready(function () {
             if (a == "0") {
                 initialize();
             } else {
-                window.location.href = "http://ilatih.com/ujicoba";
+                window.location.href = "http://ilatih.com/quiz";
             }
         },
         error: function(a, b, c) {
@@ -52,10 +52,10 @@ function initialize() {
     courseId = params.split("&")[0].split("=")[1];
     chapterId = params.split("&")[1].split("=")[1];
     $("#home").on("click", function () {
-        window.location.href = "http://ilatih.com/ujicoba/home.html?page=0";
+        window.location.href = "http://ilatih.com/quiz/home.html?page=0";
     });
     $("#latihan").on("click", function () {
-        window.location.href = "http://ilatih.com/ujicoba/home.html?page=1";
+        window.location.href = "http://ilatih.com/quiz/home.html?page=1";
     });
     currentQuestion = window.localStorage.getItem("current-question");
     currentQuestion = 0;
@@ -367,7 +367,7 @@ function toNextQuestion() {
                             },
                             cache: false,
                             success: function (a) {
-                                window.location.href = "http://ilatih.com/ujicoba/score.html";
+                                window.location.href = "http://ilatih.com/quiz/score.html";
                             },
                             error: function (a, b, c) {
                                 alert(b + ' ' + c);

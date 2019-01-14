@@ -50,7 +50,7 @@ function loadCourses() {
                         var course = courses[k];
                         var name = course.name;
                         items += "<div style=\"display: flex; flex-flow: row nowrap; margin-top: 5px;\" class=\"course-link\">\n" +
-                            "<a onclick=\"return false;\" href='http://ilatih.com/ujicoba/chapters-mobile.html?course-id="+course.id+"' style=\"text-decoration: none; color: black;\">"+name+"</a>\n" +
+                            "<a onclick=\"return false;\" href='http://ilatih.com/quiz/chapters-mobile.html?course-id="+course.id+"' style=\"text-decoration: none; color: black;\">"+name+"</a>\n" +
                             "</div>";
                         k++;
                         j--;

@@ -1,9 +1,9 @@
-const PHP_PATH = "http://ilatih.com/ujicoba/scripts/";
+const PHP_PATH = "http://ilatih.com/quiz/scripts/";
 
 $(document).ready(function() {
     /*var isFirefox = typeof InstallTrigger !== 'undefined';
     if (!isFirefox) {
-        window.location.href = "http://ilatih.com/ujicoba/browsernotsupported.html";
+        window.location.href = "http://ilatih.com/quiz/browsernotsupported.html";
         return;
     }*/
     $("#remember-me").on("click", function() {

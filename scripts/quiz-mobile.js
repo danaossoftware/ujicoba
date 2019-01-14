@@ -27,10 +27,10 @@ $(document).ready(function() {
     courseId = params.split("&")[0].split("=")[1];
     chapterId = params.split("&")[1].split("=")[1];
     $("#home").on("click", function () {
-        window.location.href = "http://ilatih.com/ujicoba/home.html?page=0";
+        window.location.href = "http://ilatih.com/quiz/home.html?page=0";
     });
     $("#latihan").on("click", function () {
-        window.location.href = "http://ilatih.com/ujicoba/home.html?page=1";
+        window.location.href = "http://ilatih.com/quiz/home.html?page=1";
     });
     currentQuestion = window.localStorage.getItem("current-question");
     currentQuestion = 0;
@@ -334,7 +334,7 @@ function toNextQuestion() {
                         },
                         cache: false,
                         success: function (a) {
-                            window.location.href = "http://ilatih.com/ujicoba/score.html";
+                            window.location.href = "http://ilatih.com/quiz/score.html";
                         },
                         error: function (a, b, c) {
                             alert(b + ' ' + c);

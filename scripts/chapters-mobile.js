@@ -54,7 +54,7 @@ function loadChapters() {
                         var chapter = chapters[k];
                         var name = chapter.name;
                         items += "<div style=\"display: flex; flex-flow: row nowrap; margin-top: 5px;\" class=\"chapter-link\">\n" +
-                            "<a onclick=\"return false;\" href='http://ilatih.com/ujicoba/rules-mobile.html?course-id="+courseId+"&chapter-id="+chapter.id+"' style=\"text-decoration: none; color: black;\">"+name+"</a>\n" +
+                            "<a onclick=\"return false;\" href='http://ilatih.com/quiz/rules-mobile.html?course-id="+courseId+"&chapter-id="+chapter.id+"' style=\"text-decoration: none; color: black;\">"+name+"</a>\n" +
                             "</div>";
                         k++;
                         j--;

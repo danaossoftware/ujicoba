@@ -3,10 +3,10 @@ $(document).ready(function() {
     params = params.substr(1, params.length);
     var email = params.split("&")[0].split("=")[1];
     $("#login").on("click", function() {
-        window.location.href = "http://ilatih.com/ujicoba/login.html";
+        window.location.href = "http://ilatih.com/quiz/login.html";
     });
     $("#signup").on("click", function() {
-        window.location.href = "http://ilatih.com/ujicoba/signup.html";
+        window.location.href = "http://ilatih.com/quiz/signup.html";
     });
     $("#reset-password").on("click", function() {
         $("#error").css("display", "none");
@@ -27,7 +27,7 @@ $(document).ready(function() {
             dataType: 'text',
             cache: false,
             success: function(a) {
-                window.location.href = "http://ilatih.com/ujicoba/password-changed.html";
+                window.location.href = "http://ilatih.com/quiz/password-changed.html";
             },
             error: function(a, b, c) {
                 alert(b+' '+c);

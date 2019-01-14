@@ -1,7 +1,7 @@
 $(document).ready(function() {
     /*var isFirefox = typeof InstallTrigger !== 'undefined';
     if (!isFirefox) {
-        window.location.href = "http://ilatih.com/ujicoba/browsernotsupported.html";
+        window.location.href = "http://ilatih.com/quiz/browsernotsupported.html";
         return;
     }*/
     /*$.ajax({
@@ -12,26 +12,26 @@ $(document).ready(function() {
         success: function(a) {
             if (a == "0") {
             } else {
-                window.location.href = "http://ilatih.com/ujicoba";
+                window.location.href = "http://ilatih.com/quiz";
             }
         },
         error: function(a, b, c) {
         }
     });*/
     $("#home").on("click", function() {
-        window.location.href = "http://ilatih.com/ujicoba/home.html";
+        window.location.href = "http://ilatih.com/quiz/home.html";
     });
     $("#latihan").on("click", function() {
-        window.location.href = "http://ilatih.com/ujicoba/home.html?page=1";
+        window.location.href = "http://ilatih.com/quiz/home.html?page=1";
     });
     $("#profile").on("click", function() {
-        window.location.href = "http://ilatih.com/ujicoba/profile.html";
+        window.location.href = "http://ilatih.com/quiz/profile.html";
     });
     $("#help").on("click", function() {
-        window.location.href = "http://ilatih.com/ujicoba/help.html";
+        window.location.href = "http://ilatih.com/quiz/help.html";
     });
     $("#contact-us").on("click", function() {
-        window.location.href = "http://ilatih.com/ujicoba/contact-us.html";
+        window.location.href = "http://ilatih.com/quiz/contact-us.html";
     });
     $("#log-out").on("click", function() {
         $.ajax({
@@ -40,7 +40,7 @@ $(document).ready(function() {
             dataType: 'text',
             cache: false,
             success: function(a) {
-                window.location.href = "http://ilatih.com/ujicoba";
+                window.location.href = "http://ilatih.com/quiz";
             },
             error: function(a, b, c) {
                 alert(a+' '+c);
@@ -56,7 +56,7 @@ function logout() {
         dataType: 'text',
         cache: false,
         success: function(a) {
-            window.location.href = "http://ilatih.com/ujicoba";
+            window.location.href = "http://ilatih.com/quiz";
         },
         error: function(a, b, c) {
             alert(a+' '+c);
