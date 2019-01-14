@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/quiz.js"></script>
+    <link href="css/quiz.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="main-container">
+    <div style="width: 89%; height: 40px; background-color: #eeeeee; margin-left: 50px; margin-top: 50px; margin-right: 100px; color: #838383; font-family: 'PalanquinBold', Arial; font-size: 15px; border: 1px solid #cccccc; display: flex; align-items: center;">
+        <div id="current-question" style="margin-left: 20px;">&nbsp;</div>
+    </div>
+    <div style="width: 89%; margin-left: 50px; display: flex; justify-content: center; flex-flow: row nowrap; margin-right: 100px; margin-top: 30px;">
+        <div id="answer-panel"
+             style="border-radius: 5px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); background-color: white; width: 50%; margin-right: 7px; padding: 30px; display: flex; flex-flow: column nowrap;">
+            <div style="font-family: 'PalanquinBold', Arial; font-size: 18px;">Jawaban:</div>
+            <div id="answers" style="margin-top: 10px; height: 150px;">
+                <!--<div style="width: 100%; height: 100%; display: flex; align-items: center; align-content: center;">
+                    <label style="margin-top: 10px; position: relative; user-select: none;">&nbsp;
+                        <input type="checkbox" onclick="return false;"
+                               style="visibility: visible; position: absolute; width: 0; height: 0; opacity: 0;">
+                        <div class="check">&nbsp;</div>
+                        <div class="check-img">
+                            <img src="img/check.png" width="12px" height="12px"
+                                 style="position: relative; left:2px; top:-6px;">
+                        </div>
+                    </label>
+                </div>-->
+                <!--<div style="font-family: 'PalanquinBold', Arial; font-size: 15px; color: black;">Jawaban 1:</div>
+                <input class="input1" style="margin-top: 5px;" type="text" name="answerA" id="answer-a">-->
+                <!-- JAWAB DENGAN SUARA -->
+                <!--<div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+                    <button class="flat-button">Jawab Dengan Suara</button>
+                </div>-->
+            </div>
+            <div id="answer-result" style="color: #27ae60; font-family: 'PalanquinBold'; font-size: 18px; margin-left: 20px; margin-top: 20px;">Jawaban Anda benar</div>
+            <div style="margin-left: 20px; margin-right: 20px; width: calc(100% - 70px); border-radius: 10px; border: 1px solid #c08175; background-color: rgba(254, 108, 93, 0.4); padding: 15px;">
+                <div style="color: #222222; font-family: 'PalanquinBold', Arial; font-size: 18px;">Jawaban yang Benar:</div>
+            </div>
+        </div>
+        <div id="question-panel"
+             style="border-radius: 5px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); background-color: white; width: 50%; margin-left: 7px; padding: 30px; position: relative; min-height: 300px;">
+            <div style="font-family: 'PalanquinBold', Arial; font-size: 18px;">Pertanyaan:</div>
+            <div style="width: 100%; display: flex; justify-content: center; flex-flow: row nowrap; margin-top: 20px;">
+                <div id="question-img-container"
+                     style="display: none; justify-content: center; align-items: center; flex-flow: column nowrap;">
+                    <img id="question-img" src="img/bab-placeholder.jpg" width="200px" height="200px"
+                         style="cursor: pointer; border-radius: 5px;">
+                    <div style="color: #888888; font-size: 12px;"><i>Klik gambar untuk memperbesar</i></div>
+                </div>
+                <video id="question-video" width="200px" height="200px" style="display: none; background-color: black; border-radius: 5px; margin-left: 10px;" controls>
+                    <source id="question-video-source" src="video/video2.mp4">
+                </video>
+            </div>
+            <div id="question-audio-container" style="width: 100%; display: none; justify-content: center; margin-top: 10px;">
+                <audio id="question-audio" controls>
+                    <source id="question-audio-source" src="audio/song.mp3">
+                </audio>
+            </div>
+            <div id="question" style="margin-top: 10px;"></div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 20px; margin-right: 10px;">
+                <button id="next-question" onclick="toNextQuestion()" class="button2">Berikutnya</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="prompt"
+     style="width: 100%; height: 100%; position: fixed; left: 0; top:0; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center;">
+    <div style="width: 500px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); background-color: white;">
+        <div id="prompt-title"
+             style="width: 100%; margin-top: 5px; display: flex; justify-content: center; align-items: center; font-family: 'PalanquinBold', Arial; font-size: 20px;">
+            &nbsp;
+        </div>
+        <div id="prompt-text" style="margin-left: 20px; margin-right: 20px; color: black; margin-top: 10px;">
+            &nbsp;
+        </div>
+        <div style="width: 100%; display: flex; justify-content: flex-end; margin-bottom: 10px;">
+            <div id="prompt-no" class="flat-button"
+                 style="font-size: 13px; display: flex; align-items: center; justify-content: center; flex-flow: row nowrap;">
+                TIDAK
+            </div>
+            <div id="prompt-yes" class="flat-button" style="font-size: 13px;">YA</div>
+        </div>
+    </div>
+</div>
+<div id="fader"
+     style="display: none; background-color: #eeeeee; width: 100%; height: 100%; position: absolute; left: 0; top: 0;">
+    &nbsp;
+</div>
+<div id="preview-img-container"
+     style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center;">
+    <img id="preview-img" width="80%" height="80%" src="img/bab-placeholder.jpg" style="">
+    <div onclick="closeImagePreview()"
+         style="width: 50px; height: 50px; position: absolute; right: 0; top: 0; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+        <img src="img/close2.png" width="20px" height="20px">
+    </div>
+</div>
+</body>
+</html>

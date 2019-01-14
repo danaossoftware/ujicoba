@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/rules.js"></script>
+    <link href="css/rules.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="main-container">
+    <div class="menu">
+        <img src="img/logo-white.png" width="30px" height="30px" style="margin-left: 20px;">
+        <div id="home" class="menu-item" style="margin-left: 20px;">
+            BERANDA
+        </div>
+        <div id="latihan" class="menu-item">
+            LATIHAN
+        </div>
+        <div id="profile" class="menu-item">
+            PROFIL
+        </div>
+        <div id="help" class="menu-item">
+            BANTUAN
+        </div>
+        <div id="contact-us" class="menu-item">
+            HUBUNGI KAMI
+        </div>
+        <div id="log-out" class="menu-item">
+            KELUAR
+        </div>
+    </div>
+    <div style="width: 100%; height: 100%; position: relative;">
+        <!-- HOME -->
+        <div id="home-content" class="main-content">
+            <div class="history">
+                <div style="color: #585a6c; font-family: 'PalanquinBold', Arial; margin-left: 20px; margin-top: 10px;">
+                    Riwayat
+                </div>
+                <div class="history-content">
+                    <div style="display: flex; flex-flow: column nowrap; width: 200px;">
+                        <div style="color: #cfd2ea; margin-top: 20px; margin-left: 20px; font-size: 13px;">Soal terjawab
+                        </div>
+                        <div style="color: #ffffff; margin-left: 20px; margin-top: 0; font-size: 25px; font-family: 'SegoeUI', Arial;">
+                            561
+                        </div>
+                        <div style="color: #cfd2ea; margin-top: 20px; margin-left: 20px; font-size: 13px;">Soal benar
+                        </div>
+                        <div style="color: #ffffff; margin-left: 20px; margin-top: 0; font-size: 25px; font-family: 'SegoeUI', Arial;">
+                            502
+                        </div>
+                        <div style="color: #cfd2ea; margin-top: 20px; margin-left: 20px; font-size: 13px;">Soal salah
+                        </div>
+                        <div style="color: #ffffff; margin-left: 20px; margin-top: 0; font-size: 25px; font-family: 'SegoeUI', Arial;">
+                            59
+                        </div>
+                    </div>
+                    <div style="width: 100%;">
+                        <div style="display: flex; flex-flow: row nowrap; margin-left: 40px; margin-top: 25px;">
+                            <div class="circle" style="background-color: #f0a500;">&nbsp;</div>
+                            <div style="margin-left: 8px; color: #cfd2ea; font-size: 13px; margin-top: -8px;">Terjawab
+                            </div>
+                            <div class="circle" style="margin-left: 10px; background-color: #f2e503;">&nbsp;</div>
+                            <div style="margin-left: 8px; color: #cfd2ea; font-size: 13px; margin-top: -8px;">Benar
+                            </div>
+                            <div class="circle" style="margin-left: 10px; background-color: #83b14c;">&nbsp;</div>
+                            <div style="margin-left: 8px; color: #cfd2ea; font-size: 13px; margin-top: -8px;">Salah
+                            </div>
+                        </div>
+                        <!--<div class="selector1" style="margin-left: 30px; padding-top: 5px; margin-top: 20px; color: white; font-size: 15px; margin-right: 30px; padding-bottom: 5px;">
+                            <div class="text1" id="last_answered_question" style="margin-left: 10px;">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</div>
+                        </div>
+                        <div class="separator" style="margin-left: 40px; margin-right: 40px;">&nbsp;</div>
+                        <div class="selector1" style="margin-left: 30px; padding-top: 5px; margin-top: 0; color: white; font-size: 15px; margin-right: 30px; padding-bottom: 5px;">
+                            <div class="text1" id="last_correct_question" style="margin-left: 10px;">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</div>
+                        </div>
+                        <div class="separator" style="margin-left: 40px; margin-right: 40px;">&nbsp;</div>
+                        <div class="selector1" style="margin-left: 30px; padding-top: 5px; margin-top: 0; color: white; font-size: 15px; margin-right: 30px; padding-bottom: 5px; position: relative;">
+                            <div class="text1" id="last_wrong_question" style="margin-left: 10px; position: absolute; left: 0; top: 0;">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text</div>
+                            <div class="fade" style="width: 100%; height: 60px; position: absolute; left: 0; top: 0;">&nbsp;</div>
+                        </div>
+                        <div class="separator" style="margin-left: 40px; margin-right: 40px;">&nbsp;</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="latihan-content" class="main-content">
+            <div style="width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
+                <div style="font-family: 'PalanquinBold', Arial; font-size: 23px; color: #2496c9; margin-left: 50px; margin-top: 50px;">
+                    Peraturan Tes
+                </div>
+                <div style="margin-top: 20px; margin-left: 50px; margin-right: 50px; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); background-color: white; padding: 30px;">
+                    <div id="rules">&nbsp;</div>
+                    <div style="margin-top: 20px; width: 100%; display: flex; justify-content: flex-end;">
+                        <button id="start-exam" class="button1">Lanjut</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="margin-top: 50px; color: #d7d8f9; width: 100%; height: 100px; background-color: #424147; display: flex; justify-content: center; align-items: center; align-content: center; flex-flow: row nowrap;">
+        <div style="">iLatih &copy; 2018</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/contact-us.html'" style="cursor: pointer; margin-left: 40px;">Hubungi Kami</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/faq.html'" style="cursor: pointer; margin-left: 30px;">FAQ</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/help.html'" style="cursor: pointer; margin-left: 30px;">Bantuan</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/mobile.html'" style="cursor: pointer; margin-left: 30px;">Mobile</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/about.html'" style="cursor: pointer; margin-left: 30px;">Tentang</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/privacy-policy.html'" style="cursor: pointer; margin-left: 30px;">Kebijakan Privasi</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/tos.html'" style="cursor: pointer; margin-left: 30px;">Ketentuan Penggunaan</div>
+    </div>
+</div>
+</body>
+</html>

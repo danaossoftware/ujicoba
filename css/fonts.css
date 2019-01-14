@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'PalanquinBold';
+    src: url('../font/Palanquin-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PalanquinRegular';
+    src: url('../font/Palanquin-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../font/SegoeUI.ttf');
+}
+
+@font-face {
+    font-family: 'SegoeUILight';
+    src: url("../font/SegoeUILight.ttf");
+}
+
+@font-face {
+    font-family: 'SegoeUIBold';
+    src: url('../font/segoeuib.ttf');
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: url("../font/Mohave-Regular.otf") format("opentype");
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil</title>
+    <link href="img/logo.png" rel="icon">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/global.js"></script>
+    <script src="scripts/profile.js"></script>
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="main-container">
+    <div class="menu">
+        <img src="img/logo-white.png" width="30px" height="30px" style="margin-left: 20px;">
+        <div id="home" class="menu-item" style="margin-left: 20px;">
+            BERANDA
+        </div>
+        <div id="latihan" class="menu-item">
+            LATIHAN
+        </div>
+        <div id="profile" class="menu-item">
+            PROFIL
+        </div>
+        <div id="help" class="menu-item">
+            BANTUAN
+        </div>
+        <div id="contact-us" class="menu-item">
+            HUBUNGI KAMI
+        </div>
+        <div id="log-out" class="menu-item">
+            KELUAR
+        </div>
+    </div>
+    <div style="padding: 20px; width: 100%;">
+        <div style="width: 100%; display: flex; flex-flow: row nowrap;">
+            <div style="background-color: #e4e7eb; border-radius: 50%; width: 150px; height: 150px; display: flex; justify-content: center; align-items: center;">
+                <img id="profile-picture" width="92%" height="92%" style="border-radius: 50%;" src="img/profile_icon.png">
+            </div>
+            <div style="display: flex; flex-flow: column nowrap; margin-left: 30px;">
+                <div id="display-name" style="color: black; font-family: 'SegoeUILight', Arial; font-size: 30px;">User Name</div>
+                <div style="display: flex; align-items: center; flex-flow: row nowrap; margin-top: 10px;">
+                    <div id="age" style="color: black; font-family: 'SegoeUILight', Arial; font-size: 18px;">25</div>
+                    <div style="color: #888888; font-size: 10px; margin-left: 8px;">&bull;</div>
+                    <img id="gender" src="img/male.png" width="15px" style="margin-left: 10px;">
+                    <div style="color: #888888; font-size: 10px; margin-left: 8px;">&bull;</div>
+                    <div id="city" style="color: black; font-family: 'SegoeUILight', Arial; font-size: 18px; margin-left: 12px;">
+                        Jakarta, Indonesia
+                    </div>
+                </div>
+                <button onclick="changeProfile()" class="button5" style="width: 170px; height: 40px; margin-top: 20px;">Ubah Profil</button>
+            </div>
+        </div>
+        <div style="width: 100%; display: flex; flex-flow: row nowrap; margin-top: 20px;">
+            <div id="about-tab" class="profile-tab" style="padding-left: 15px; padding-right: 15px; color: #1a1e21;">
+                <div id="about-tab-text" style="font-family: 'PalanquinRegular', Arial; font-size: 18px;">TENTANG</div>
+            </div>
+            <div id="photo-tab" class="profile-tab" style="padding-left: 15px; padding-right: 15px;">
+                <div id="photo-tab-text" style="font-family: 'PalanquinRegular', Arial; font-size: 18px;">FOTO</div>
+            </div>
+            <div id="scores-tab" class="profile-tab" style="padding-left: 15px; padding-right: 15px;">
+                <div id="scores-tab-text" style="font-family: 'PalanquinRegular', Arial; font-size: 18px;">PERINGKAT
+                </div>
+            </div>
+        </div>
+        <div style="position: relative; margin-top: 5px;">
+            <div style="width: 97%; height: 2px; background-color: #f1f1f1; position: absolute; top: 0; left: 0;">
+                &nbsp;
+            </div>
+            <div id="indicator"
+                 style="transition: transform 1s; width: 108px; background-color: #e74c3c; position: absolute; top: 0; left: 0; height: 5px; margin-top: -3px;"></div>
+        </div>
+        <div style="position: relative; width: 100%;">
+            <!-- ABOUT -->
+            <div id="about-panel"
+                 style="position: absolute; left: 0; top: 0; width: 100%; display: flex; flex-flow: row nowrap;">
+                <div style="width: 50%; display: flex; flex-flow: column nowrap; margin-right: 30px;">
+                    <div style="color: black; font-family: 'PalanquinBold', 'Arial Black'; font-size: 18px; margin-top: 15px;">
+                        Ringkasan
+                    </div>
+                    <div id="summary" style="color: black; text-align: justify; line-height: 25px;">
+                    </div>
+                    <div style="color: black; font-family: 'PalanquinBold', 'Arial Black'; font-size: 18px; margin-top: 15px;">
+                        Apa yang sedang saya lakukan sekarang
+                    </div>
+                    <div id="current-routine" style="color: black; text-align: justify; line-height: 25px;">
+                    </div>
+                    <div style="color: black; font-family: 'PalanquinBold', 'Arial Black'; font-size: 18px; margin-top: 15px;">
+                        Saya hebat dalam bidang
+                    </div>
+                    <div id="my-passion" style="color: black; text-align: justify; line-height: 25px; margin-bottom: 20px;">
+                    </div>
+                </div>
+                <div style="width: 50%; display: flex; flex-flow: column nowrap;">
+                    <div style="font-family: 'PalanquinBold', 'Arial Black'; font-size: 18px; margin-top: 15px;">Rincian
+                        Profil
+                    </div>
+                    <!--<div style="height: 1px; background-color: rgba(136, 136, 136, .3); margin-top: 15px;">&nbsp;</div>
+                    <div style="font-size: 15px; color: #b3b3b3; margin-top: 8px; position: relative;">
+                        Terakhir Online
+                        <div style="position: absolute; left: 0; top: 0; margin-left: 150px; color: #555658;">2
+                            Februari
+                        </div>
+                    </div>-->
+                    <div style="width: 94%; height: 1px; background-color: rgba(136, 136, 136, .3); margin-top: 15px;">&nbsp;</div>
+                    <div style="font-size: 15px; color: #b3b3b3; margin-top: 8px; position: relative;">
+                        Etnis
+                        <div id="ethnic" style="position: absolute; left: 0; top: 0; margin-left: 150px; color: #555658;">Putih
+                        </div>
+                    </div>
+                    <div style="width: 94%; height: 1px; background-color: rgba(136, 136, 136, .3); margin-top: 15px;">&nbsp;</div>
+                    <div style="font-size: 15px; color: #b3b3b3; margin-top: 8px; position: relative;">
+                        Tinggi
+                        <div id="height" style="position: absolute; left: 0; top: 0; margin-left: 150px; color: #555658;">125 cm
+                        </div>
+                    </div>
+                    <div style="width: 94%; height: 1px; background-color: rgba(136, 136, 136, .3); margin-top: 15px;">&nbsp;</div>
+                    <div style="font-size: 15px; color: #b3b3b3; margin-top: 8px; position: relative;">
+                        Tanggal lahir
+                        <div id="birthday" style="position: absolute; left: 0; top: 0; margin-left: 150px; color: #555658;">1 Juli
+                            1994
+                        </div>
+                    </div>
+                    <div style="width: 94%; height: 1px; background-color: rgba(136, 136, 136, .3); margin-top: 15px;">&nbsp;</div>
+                    <div style="font-size: 15px; color: #b3b3b3; margin-top: 8px; position: relative;">
+                        Usia
+                        <div id="age-2" style="position: absolute; left: 0; top: 0; margin-left: 150px; color: #555658;">24 Tahun
+                        </div>
+                    </div>
+                    <div style="width: 94%; height: 1px; background-color: rgba(136, 136, 136, .3); margin-top: 15px;">&nbsp;</div>
+                    <div style="font-size: 15px; color: #b3b3b3; margin-top: 8px; position: relative;">
+                        Kota
+                        <div id="city-2" style="position: absolute; left: 0; top: 0; margin-left: 150px; color: #555658;">Jakarta,
+                            Indonesia
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PHOTO COLLECTIONS -->
+            <div id="photo-panel-container"
+                 style="display: none; background-color: white; position: absolute; left: 0; top: 0; width: 100%; margin-top: 20px;">
+                <div style="display: flex; justify-content: flex-end; padding-right: 30px;">
+                    <button onclick="addPhoto()" class="button4" style="height: 40px;">Tambah Foto</button>
+                    <input type="file" id="photo-selector" style="width: 0; height: 0; opacity: 0;">
+                </div>
+                <div id="photo-panel"
+                     style="display: flex; justify-content: center; align-content: center; flex-flow: row wrap; margin-top: 10px;"></div>
+                <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px; margin-bottom: 20px;">
+                    <button id="load-more-photos" onclick="displayMorePictures()" class="button5" style="height: 40px;">
+                        Lihat Lebih Banyak
+                    </button>
+                </div>
+                <!--<img src="img/wallpaper.jpg" width="130px" height="130px" style="margin: 5px; border-radius: 5px;">-->
+            </div>
+            <!-- SCORES -->
+            <div id="scores-panel-container"
+                 style="display: none; background-color: white; position: absolute; left: 0; top: 0; width: 100%; height: 300px; margin-top: 20px;">
+                <div style="width: 100%; display: flex; justify-content: center; align-items: center; align-content: center; flex-flow: row nowrap; margin-top: 30px;">
+                    <!-- SOAL TERJAWAB -->
+                    <div style="display: flex; flex-flow: column nowrap; margin-right: 10px;">
+                        <div style="width: 400px; height: 150px; background-color: #f1c40f;">
+                            <div style="width: 100%; display: flex; justify-content: center; align-items: center; align-content: center; color: white; font-family: 'SegoeUILight', Arial; font-size: 60px; margin-top: 20px; flex-flow: column nowrap;">
+                                <div id="total-answered">0</div>
+                                <div style="color: white; font-size: 20px;">Soal terjawab</div>
+                            </div>
+                        </div>
+                        <div style="width: 400px; height: 5px; background-color: #f39c12;">
+                        </div>
+                    </div>
+                    <!-- SOAL BENAR -->
+                    <div style="display: flex; flex-flow: column nowrap; margin-left: 10px; margin-right: 10px;">
+                        <div style="width: 400px; height: 150px; background-color: #3498db;">
+                            <div style="width: 100%; display: flex; justify-content: center; align-items: center; align-content: center; color: white; font-family: 'SegoeUILight', Arial; font-size: 60px; margin-top: 20px; flex-flow: column nowrap;">
+                                <div id="total-correct">0</div>
+                                <div style="color: white; font-size: 20px;">Soal benar</div>
+                            </div>
+                        </div>
+                        <div style="width: 400px; height: 5px; background-color: #2980b9;">
+                        </div>
+                    </div>
+                    <!-- SOAL SALAH -->
+                    <div style="display: flex; flex-flow: column nowrap; margin-left: 10px;">
+                        <div style="width: 400px; height: 150px; background-color: #e74c3c;">
+                            <div style="width: 100%; display: flex; justify-content: center; align-items: center; align-content: center; color: white; font-family: 'SegoeUILight', Arial; font-size: 60px; margin-top: 20px; flex-flow: column nowrap;">
+                                <div id="total-wrong">0</div>
+                                <div style="color: white; font-size: 20px;">Soal salah</div>
+                            </div>
+                        </div>
+                        <div style="width: 400px; height: 5px; background-color: #c0392b;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="preview-img-container"
+     style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center;">
+    <img id="preview-img" width="80%" height="80%" src="img/bab-placeholder.jpg" style="">
+    <div onclick="closeImagePreview()"
+         style="width: 50px; height: 50px; position: absolute; right: 0; top: 0; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+        <img src="img/close2.png" width="20px" height="20px">
+    </div>
+    <div onclick="deletePicture(this)" style="width: 100%; position: absolute; bottom: 0; left: 0; display: flex; justify-content: center; align-items: center; align-content: center; margin-bottom: 5px; flex-flow: column nowrap; cursor: pointer;">
+        <img src="img/delete.png" width="20px" height="20px" alt="Delete photo">
+        <div style="color: white;">Hapus Foto</div>
+    </div>
+</div>
+</body>
+</html>

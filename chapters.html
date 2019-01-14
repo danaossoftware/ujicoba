@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/chapters.js"></script>
+    <link href="css/chapters.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="main-container">
+    <div class="menu">
+        <img src="img/logo-white.png" width="30px" height="30px" style="margin-left: 20px;">
+        <div id="home" class="menu-item" style="margin-left: 20px;">
+            BERANDA
+        </div>
+        <div id="latihan" class="menu-item">
+            LATIHAN
+        </div>
+        <div id="profile" class="menu-item">
+            PROFIL
+        </div>
+        <div id="help" class="menu-item">
+            BANTUAN
+        </div>
+        <div id="contact-us" class="menu-item">
+            HUBUNGI KAMI
+        </div>
+        <div id="log-out" class="menu-item">
+            KELUAR
+        </div>
+    </div>
+    <div style="width: 100%; height: 100%; position: relative;">
+        <div id="latihan-content" class="main-content">
+            <div style="width: 100%; height: 100%; display: flex; flex-flow: column nowrap;">
+                <div style="font-family: 'PalanquinBold', Arial; font-size: 23px; color: #2496c9; margin-left: 50px; margin-top: 50px;">
+                    Pilih Bab
+                </div>
+                <div style="margin-top: 20px; margin-left: 50px; margin-right: 50px; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); background-color: white; padding: 30px;">
+                    <table id="chapters" style="table-layout:fixed; border-collapse:separate; border-spacing: 0 1em;">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="margin-top: 50px; color: #d7d8f9; width: 100%; height: 100px; background-color: #424147; display: flex; justify-content: center; align-items: center; align-content: center; flex-flow: row nowrap;">
+        <div style="">iLatih &copy; 2018</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/contact-us.html'" style="cursor: pointer; margin-left: 40px;">Hubungi Kami</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/faq.html'" style="cursor: pointer; margin-left: 30px;">FAQ</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/help.html'" style="cursor: pointer; margin-left: 30px;">Bantuan</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/mobile.html'" style="cursor: pointer; margin-left: 30px;">Mobile</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/about.html'" style="cursor: pointer; margin-left: 30px;">Tentang</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/privacy-policy.html'" style="cursor: pointer; margin-left: 30px;">Kebijakan Privasi</div>
+        <div onclick="window.location.href='http://ilatih.com/ujicoba/tos.html'" style="cursor: pointer; margin-left: 30px;">Ketentuan Penggunaan</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <style>
+            .timeline-item {
+                background: #fff;
+                border: 1px solid;
+                border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+                border-radius: 3px;
+                padding: 12px;
+
+                margin: 0 auto;
+                max-width: 472px;
+                min-height: 200px;
+            }
+
+            @keyframes placeHolderShimmer{
+                0%{
+                    background-position: -800px 0
+                }
+                100%{
+                    background-position: 800px 0
+                }
+            }
+
+            .animated-background {
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-name: placeHolderShimmer;
+                animation-timing-function: linear;
+                background: #f6f7f8;
+                background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+                background-size: 800px 104px;
+                height: 96px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="timeline-wrapper">
+        <div class="timeline-item">
+            <div class="animated-background">
+                <div class="background-masker header-top"></div>
+                <div class="background-masker header-left"></div>
+                <div class="background-masker header-right"></div>
+                <div class="background-masker header-bottom"></div>
+                <div class="background-masker subheader-left"></div>
+                <div class="background-masker subheader-right"></div>
+                <div class="background-masker subheader-bottom"></div>
+                <div class="background-masker content-top"></div>
+                <div class="background-masker content-first-end"></div>
+                <div class="background-masker content-second-line"></div>
+                <div class="background-masker content-second-end"></div>
+                <div class="background-masker content-third-line"></div>
+                <div class="background-masker content-third-end"></div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

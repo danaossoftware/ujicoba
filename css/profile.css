@@ -1,0 +1,49 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    margin: 0 auto;
+    font-family: 'PalanquinRegular', Arial;
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    background-color: #424147;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    color: white;
+    font-family: 'Mohave', Arial;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    transition: background-color .15s;
+}
+
+.menu-item:hover {
+    background-color: #fe6c5d;
+}
+
+.profile-tab {
+    color: #bdbdbd;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.profile-tab:hover {
+    color: #8a8a8a;
+}

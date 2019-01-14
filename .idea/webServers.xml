@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7173214f-3dc1-4d8f-bdf8-722a5b3240ef" name="XAMPP" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\Users\Dana\Documents\WebFiles\quiz" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

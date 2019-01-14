@@ -1,0 +1,25 @@
+.menu-item {
+    color: white;
+    font-size: 20px;
+    font-family: 'Mohave', 'Arial Black';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    height: 25px;
+}
+
+.menu-item:hover {
+    background-color: #c5f69f;
+}
+
+.menu-item:active {
+    background-color: #b8e994;
+}
+
+.course-link {
+    cursor: pointer;
+}
+
+.course-link:hover {
+    text-decoration: underline;
+}

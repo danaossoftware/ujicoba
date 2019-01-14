@@ -1,0 +1,7 @@
+.chapter-link {
+    cursor: pointer;
+}
+
+.chapter-link:hover {
+    text-decoration: underline;
+}

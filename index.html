@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script>
+            $.ajax({
+                type: 'GET',
+                url: "http://ilatih.com/ujicoba/scripts/check-session.php",
+                dataType: 'text',
+                cache: false,
+                success: function(a) {
+                    if (a == 0) {
+                        // Logged in
+                        window.location = "home.html";
+                    } else if (a == -1) {
+                        // Not logged in
+                        window.location = "login.html";
+                    }
+                },
+                error: function(a, b, c) {
+                    alert(b+' '+c);
+                }
+            });
+        </script>
+    </head>
+</html>

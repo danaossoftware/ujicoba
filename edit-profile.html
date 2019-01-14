@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script src="scripts/global.js"></script>
+        <script src="scripts/edit-profile.js"></script>
+        <link href="http://ilatih.com/ujicoba/img/logo.png" rel="icon">
+        <title>Edit Profil</title>
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
+        <link href="css/edit-profile.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class="main-container">
+        <div class="menu">
+            <img src="img/logo-white.png" width="30px" height="30px" style="margin-left: 20px;">
+            <div id="home" class="menu-item" style="margin-left: 20px;">
+                BERANDA
+            </div>
+            <div id="latihan" class="menu-item">
+                LATIHAN
+            </div>
+            <div id="profile" class="menu-item">
+                PROFIL
+            </div>
+            <div id="help" class="menu-item">
+                BANTUAN
+            </div>
+            <div id="contact-us" class="menu-item">
+                HUBUNGI KAMI
+            </div>
+            <div id="log-out" class="menu-item">
+                KELUAR
+            </div>
+        </div>
+        <div style="width: 100%; height: 100%; display: flex; justify-content: center; flex-flow: column nowrap; align-items: center; align-content: center; margin-top: 20px;">
+            <div onclick="changeProfilePicture()" id="profile-picture-container" style="width: 120px; height: 120px; position: relative; cursor: pointer;">
+                <img id="profile-picture" src="img/profile_icon.png" width="100%" height="100%" style="border-radius: 50%;">
+                <div id="profile-picture-edit-container" style="background-color: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; left: 0; top: 0; border-radius: 50%; display: none; justify-content: center; align-items: center;">
+                    <div style="color: white; font-family: 'SegoeUILight', Arial; font-size: 25px;">Ubah</div>
+                </div>
+            </div>
+            <input id="select-profile-picture" type="file" name="browse" style="width: 0; height: 0; overflow: hidden;">
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 15px;">
+                <div style="color: black; font-size: 18px;">Nama :</div>
+                <input class="input1" type="text" name="name" id="name" style="width: 96%;">
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Tanggal lahir :</div>
+                <input class="input1" type="text" name="birthday" id="birthday" placeholder="hh/MM/YYYY" style="width: 96%;" maxlength="10">
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Gender :</div>
+                <input class="input1" type="text" name="name" id="gender" placeholder="L/P" style="width: 96%;" maxlength="1">
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Kota :</div>
+                <input class="input1" type="text" name="city" id="city" style="width: 96%;">
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Etnis :</div>
+                <input class="input1" type="text" name="ethnic" id="ethnic" style="width: 96%;">
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Tinggi :</div>
+                <input class="input1" type="text" name="height" id="height" style="width: 96%;">
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Ringkasan :</div>
+                <textarea spellcheck="false" class="input1" id="summary" style="width: 96%; height: 200px; padding-top: 10px; padding-bottom: 10px;"></textarea>
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Yang saya lakukan sekarang :</div>
+                <textarea spellcheck="false" class="input1" id="current-routine" style="width: 96%; height: 200px; padding-top: 10px; padding-bottom: 10px;"></textarea>
+            </div>
+            <div style="width: 600px; display: flex; align-items: flex-start; flex-flow: column nowrap; margin-top: 10px;">
+                <div style="color: black; font-size: 18px;">Saya hebat dalam bidang :</div>
+                <textarea spellcheck="false" class="input1" id="my-passion" style="width: 96%; height: 200px; padding-top: 10px; padding-bottom: 10px;"></textarea>
+            </div>
+            <div style="width: 600px; display: flex; justify-content: center; align-items: center; align-content: center; margin-top: 10px; margin-bottom: 30px;">
+                <button onclick="cancelEditing()" class="button5" style="height: 40px; width: 150px; margin-right: 10px;">Buang</button>
+                <button onclick="saveProfileInfo()" class="button4" style="height: 40px; width: 150px;">Simpan</button>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

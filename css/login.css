@@ -1,0 +1,149 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'PalanquinRegular', Arial;
+    background-image: url("../img/login-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: row nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 330px;
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flat-input {
+    background-color: #f5f5f5;
+    height: 38px;
+    border: 0;
+}
+
+.flat-button {
+    background-color: #26abe3;
+    color: white;
+    height: 40px;
+    border: 0;
+    width: 100px;
+    cursor: pointer;
+}
+
+.flat-button:hover {
+    background-color: #2496c9;
+}
+
+.flat-button:active {
+    background-color: #248fc0;
+}
+
+#logo {
+    margin-left: 80px;
+}
+
+#login-text {
+    margin-right: 100px;
+}
+
+#login {
+    width: 330px;
+    margin-left: 35px;
+}
+
+#text1 {
+    font-size: 20px;
+    margin-left: 33px;
+}
+
+#email, #password {
+    width: 265px;
+}
+
+#email-icon, #password-icon {
+    margin-left: 30px;
+}
+
+@media only screen and (max-device-width: 1080px) {
+    #app-download, #app-download-img, #contact-us, #contact-us-img, #about, #about-img {
+        display: none;
+    }
+
+    #logo {
+        margin-left: 10px;
+    }
+
+    #login-text {
+        margin-right: 10px;
+    }
+
+    .login-form {
+        width: 270px;
+    }
+
+    #text1 {
+        font-size: 16px;
+        margin-left: 23px;
+    }
+
+    #email, #password {
+        width: 166px;
+    }
+
+    #login {
+        width: 230px;
+        margin-left: 20px;
+    }
+
+    #email-icon, #password-icon {
+        margin-left: 15px;
+    }
+}

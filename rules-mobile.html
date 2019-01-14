@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="http://ilatih.com/ujicoba/img/logo.png" rel="icon">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/global.js"></script>
+    <script src="scripts/rules-mobile.js"></script>
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/global-mobile.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/rules-mobile.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peraturan</title>
+</head>
+<body>
+<div style="z-index: 1000; position: fixed; width: 100%; height: 50px; background-color: #424147;">
+    <div style="display: flex; justify-content: center; align-items: center; align-content: center; flex-flow: row nowrap;">
+        <img src="img/logo.png" width="30px" height="30px">
+        <div style="margin-left: 15px; color: white; font-family: 'PalanquinBold', 'Arial Black'; font-size: 25px;">
+            iLatih
+        </div>
+    </div>
+    <div onclick="openMenu()" style="cursor: pointer; position: absolute; left: 10px; top: 10px; display: none; align-items: center;">
+        <img src="img/hamburger.png" width="30px" height="30px" style="margin-left: 10px;">
+    </div>
+</div>
+<div id="menu" style="z-index: 1000; position: absolute; top: 50px; left: -200px; width: 200px; height: 100%; background-color: #2e2d33;">
+    <div class="menu-item">BERANDA</div>
+    <div class="menu-item">LATIHAN</div>
+    <div class="menu-item">PROFIL</div>
+    <div class="menu-item">BANTUAN</div>
+    <div class="menu-item">HUBUNGI KAMI</div>
+    <div class="menu-item">KELUAR</div>
+</div>
+<div style="position: absolute; top: 50px; left: 0; width: 100%; height: 100%;">
+    <div style="font-family: 'PalanquinBold', Arial; font-size: 20px; color: #2496c9; margin-left: 20px; margin-top: 20px;">
+        Peraturan
+    </div>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); background-color: white; padding: 30px;">
+        <div id="rules">&nbsp;</div>
+        <div style="margin-top: 20px; width: 100%; display: flex; justify-content: flex-end;">
+            <button id="start-exam" class="button1">Lanjut</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

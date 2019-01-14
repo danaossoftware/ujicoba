@@ -1,0 +1,1 @@
+const PHP_PATH = "http://ilatih.com/ujicoba/scripts/";

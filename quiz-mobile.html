@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="http://ilatih.com/ujicoba/img/logo.png" rel="icon">
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script src="scripts/global.js"></script>
+        <script src="scripts/quiz-mobile.js"></script>
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/global-mobile.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
+        <link href="css/quiz-mobile.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Latihan</title>
+    </head>
+    <body>
+        <div id="question-panel" class="card" style="margin-left: 20px; margin-right: 20px; margin-top: 20px; padding: 10px; margin-bottom: 20px;">
+            <div style="width: 100%; display: flex; justify-content: center; color: black; font-family: 'PalanquinBold', 'Arial Black'; font-size: 20px;">
+                Pertanyaan
+            </div>
+            <div id="question" style="margin-top: 20px; color: black;">Ini adalah pertanyaan. Jawabannya adalah ....</div>
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <video id="question-video" style="border-radius: 5px; width: 150px; height: 150px;" controls>
+                    <source src="video/video.mp4">
+                </video>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center;">
+                <audio id="question-audio" style="border-radius: 5px; width: 150px; height: 150px;" controls>
+                    <source src="audio/audio.mp3">
+                </audio>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center; color: black; font-family: 'PalanquinBold', 'Arial Black'; font-size: 20px; margin-top: 20px;">
+                Jawaban
+            </div>
+            <div id="answers" style="margin-top: 10px;">
+            </div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 20px; margin-right: 10px;">
+                <button id="next-question" onclick="toNextQuestion()" class="button2">Berikutnya</button>
+            </div>
+        </div>
+        <div id="prompt"
+             style="width: 100%; height: 100%; position: fixed; left: 0; top:0; background-color: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center;">
+            <div style="width: 500px; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); background-color: white;">
+                <div id="prompt-title"
+                     style="width: 100%; margin-top: 5px; display: flex; justify-content: center; align-items: center; font-family: 'PalanquinBold', Arial; font-size: 20px;">
+                    &nbsp;
+                </div>
+                <div id="prompt-text" style="margin-left: 20px; margin-right: 20px; color: black; margin-top: 10px;">
+                    &nbsp;
+                </div>
+                <div style="width: 100%; display: flex; justify-content: flex-end; margin-bottom: 10px;">
+                    <div id="prompt-no" class="flat-button"
+                         style="font-size: 13px; display: flex; align-items: center; justify-content: center; flex-flow: row nowrap;">
+                        TIDAK
+                    </div>
+                    <div id="prompt-yes" class="flat-button" style="font-size: 13px;">YA</div>
+                </div>
+            </div>
+        </div>
+        <div id="fader"
+             style="display: none; background-color: #eeeeee; width: 100%; height: 100%; position: absolute; left: 0; top: 0;">
+            &nbsp;
+        </div>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="http://ilatih.com/ujicoba/img/logo.png" rel="icon">
+        <script src="scripts/jquery-3.3.1.min.js"></script>
+        <script src="scripts/global.js"></script>
+        <script src="scripts/home-mobile.js"></script>
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
+        <link href="css/home-mobile.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beranda</title>
+    </head>
+    <body>
+        <div style="z-index: 1000; position: fixed; width: 100%; height: 50px; background-color: #424147;">
+            <div style="display: flex; justify-content: center; align-items: center; align-content: center; flex-flow: row nowrap;">
+                <img src="img/logo.png" width="30px" height="30px">
+                <div style="margin-left: 15px; color: white; font-family: 'PalanquinBold', 'Arial Black'; font-size: 25px;">iLatih</div>
+            </div>
+            <div onclick="openMenu()" style="cursor: pointer; position: absolute; left: 10px; top: 10px; display: none; align-items: center;">
+                <img src="img/hamburger.png" width="30px" height="30px" style="margin-left: 10px;">
+            </div>
+        </div>
+        <div id="menu" style="z-index: 1000; position: absolute; top: 50px; left: -200px; width: 200px; height: 100%; background-color: #2e2d33;">
+            <div class="menu-item">BERANDA</div>
+            <div class="menu-item">LATIHAN</div>
+            <div class="menu-item">PROFIL</div>
+            <div class="menu-item">BANTUAN</div>
+            <div class="menu-item">HUBUNGI KAMI</div>
+            <div class="menu-item">KELUAR</div>
+        </div>
+        <div style="position: absolute; top: 50px; left: 0; width: 100%; height: 100%;">
+            <div id="confirm-container" style="width: 100%; display: none;">
+                <div style="border-radius: 5px; background-color: #ffc3b8; border: 1px solid #ff2725; margin-left: 20px; margin-right: 20px; margin-top: 5px; padding: 5px;">
+                    <div style="color: #ff2725; font-family: 'PalanquinBold', 'Arial Black';">
+                        Anda belum mengkonfirmasi email Anda. Klik <a class="confirm-link" style="" href="http://ilatih.com/ujicoba/send-verification-email.html">di sini</a> untuk mengkonfirmasi akun Anda.
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+                <button onclick="window.location.href='http://ilatih.com/ujicoba/courses-mobile.html'" class="button4" style="padding-left: 20px; padding-right: 20px;">Ujian Sekarang</button>
+            </div>
+            <div style="width: 100%; height: 40px; position: relative;">
+                <div style="color: black; font-family: PalanquinBold, Arial; font-size: 18px; margin-top: 10px; margin-left: 20px; position: absolute; top: 0; left: 0;">
+                    BERITA KAMPUS
+                </div>
+                <div onclick="window.open('http://newsapi.org/', '_blank').focus()" style="position: absolute; top: 0; right: 0; display: flex; justify-content: flex-end; text-decoration: underline; color: #888888; margin-top: 10px; margin-right: 20px; font-size: 13px; cursor: pointer;">
+                    <i>Credit</i>
+                </div>
+            </div>
+            <div id="news" style="margin-top: -5px; margin-left: 20px;">
+                <!--<div class="card">
+                    <div style="color: black; font-family: SegoeUILight, Arial; font-size: 17px; text-decoration: underline;">
+                        Jerry Lorenzo Designed Special Fear of God 1s for His Alma Mater
+                    </div>
+                    <div style="color: black; font-family: SegoeUILight, Arial; font-size: 14px; margin-top: 5px;">
+                        Ending 2018 with a bang, Fear of God-founder Jerry Lorenzo has taken to his personal Instagram account to showcase a new batch of Fear of God 1s, done in collaboration with Nike Basketball. Crafted from a mostly mesh upper, which differs from the originals, t…
+                    </div>
+                </div>-->
+                <div class="card" style="margin-top: 10px; margin-right: 20px;">
+                    <div class="news-placeholder">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 250px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 200px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 230px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                </div>
+                <div class="card" style="margin-top: 10px; margin-right: 20px;">
+                    <div class="news-placeholder">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 250px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 200px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 230px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                </div>
+                <div class="card" style="margin-top: 10px; margin-right: 20px;">
+                    <div class="news-placeholder">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 250px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 200px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 230px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                </div>
+                <div class="card" style="margin-top: 10px; margin-right: 20px;">
+                    <div class="news-placeholder">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 250px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 200px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                    <div class="news-placeholder" style="width: 230px; height: 10px; margin-top: 10px;">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
